@@ -102,18 +102,7 @@ function handleSubmit(event) {
   let cityInputElement = document.querySelector("#city-input");
   search(cityInputElement.value);
 }
-
-function displayCelsiusTemperature(event) {
-  event.preventDefault();
-  let celsiusTemperature = (14 - 32) / 1.8;
-  let temperatureElement = document.querySelector("#temperature");
-  temperatureElement.innerHTML = Math.round(celsiusTemperature);
-}
 search("New York");
 
 let form = document.querySelector("#search-form");
 form.addEventListener("submit", handleSubmit);
-
-let celsiusLink = document.querySelector("#celsius-link");
-console.log(celsiusLink);
-celsiusLink.addEventListener("click", displayCelsiusTemperature);
